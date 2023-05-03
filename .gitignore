@@ -1,0 +1,16 @@
+# ignorar archivos y carpetas generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# ignorar directorios de dependencias de npm
+/node_modules
+
+# ignorar directorios y archivos específicos de la aplicación
+/dist
+/build
+.env
+
+# ignorar archivos de respaldo
+*~
+*.bak
+*.swp

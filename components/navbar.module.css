@@ -1,0 +1,28 @@
+.nav_cont {
+    background-color: #46B1D8;
+    background-image: url('../public/assets/pngwing.com\ \(1\).png');
+    background-size: contain;
+    background-repeat: repeat-y;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+
+
+.nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.badge{
+    transition: 0.5s all ease;
+}
+
+.badge:hover{
+    transform: scale(1.08);
+}
