@@ -23,14 +23,14 @@
 
 .title {
     font-size: 70px;
-    color: #eccc22;
+    color: black;
     display: flex;
     justify-content: center;
     transition: 0.5s all ease;
-    position: absolute;
-    top: 27%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* position: absolute; */
+    /* top: 27%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
 }
 
 
