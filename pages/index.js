@@ -7,9 +7,12 @@ import About from "./about";
 
 function HomePage() {
     return (
+        <>
         <div style={{margin: 0}}>
            <About/>
         </div>
+        </>
+        
     )
 }
 

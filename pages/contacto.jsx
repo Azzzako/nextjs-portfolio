@@ -11,6 +11,7 @@ const Contacto = () => {
     
 
     return (
+        <>
         <div className={`${styles.contenedor}`}>
             <section>
                 <div className={`${styles.balloon} nes-balloon`}>
@@ -63,6 +64,8 @@ const Contacto = () => {
                 </div>
             </section>
         </div>
+        </>
+        
     )
 }
 
