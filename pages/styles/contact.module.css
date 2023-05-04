@@ -1,0 +1,23 @@
+.contenedor{
+    background-image: url('../../public/assets/966314.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.balloon{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: transparent;
+}
+
+.icon_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

@@ -26,12 +26,13 @@
 
 .balloon{
     font-size: 25px;
-    margin: 20px;
+    margin: 50px 350px ;
 }
 
-@media (max-width:960px){
+@media (max-width:1240px){
     .balloon{
         font-size: 18px;
+        margin: 30px;
     }
 }
 
@@ -41,3 +42,42 @@
     gap: 50px;
     align-items: center;
 }
+
+
+.project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gif_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.gif_cont_cent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.balloon_projects{
+    display: flex;
+    gap: 10px;
+    margin: 50px 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:1500px){
+    .balloon_projects{
+        flex-direction: column;
+        margin: 30px;
+}
+}
+
+

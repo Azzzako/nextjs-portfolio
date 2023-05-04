@@ -22,13 +22,13 @@
 }
 
 .title {
-    font-size: 100px;
+    font-size: 70px;
     color: #eccc22;
     display: flex;
     justify-content: center;
     transition: 0.5s all ease;
     position: absolute;
-    top: 20%;
+    top: 27%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -41,8 +41,8 @@
     }
 
     .title {
-        font-size: 40px;
-        top: 20%;
+        font-size: 30px;
+        top: 25%;
     }
 }
 

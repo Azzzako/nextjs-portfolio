@@ -2,6 +2,7 @@ import React from 'react'
 import App from 'next/app'
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import 'nes.css/css/nes.css'
 
 export default class MyApp extends App {
@@ -20,6 +21,7 @@ export default class MyApp extends App {
         </Head>
         <Navbar/>
         <Component {...pageProps} />
+        <Footer/>
       </>
     )
   }

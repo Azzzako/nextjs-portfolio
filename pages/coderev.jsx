@@ -1,11 +1,16 @@
 import axios from "axios";
 import React, { useState } from "react";
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from './styles/coderev.module.css'
 import { IoLogoJavascript, IoLogoNodejs } from 'react-icons/io'
 import { FaReact } from 'react-icons/fa'
 import { SiRedux, SiExpress, SiSequelize, SiPostgresql, SiBootstrap, SiMaterialdesign } from 'react-icons/si'
 import { TbBrandNextjs } from 'react-icons/tb'
+import todo from '../public/assets/todomachine.png'
+import palace from '../public/assets/gamingpalacesss.png'
+import home from '../public/assets/home.png'
+import cana from '../public/assets/cannablitzzzz.png'
 
 
 //https://api.giphy.com/v1/gifs/search?api_key=UuCkb2kXmu2TK2r9jF4yO4MGJhzc4UYj&q=gatos&limit=25&offset=0&rating=g&lang=es
@@ -14,6 +19,7 @@ const CodeRev = () => {
 
     const [response, setResponse] = useState(null)
     const [search, setSearch] = useState('')
+    const [centrarDiv, setCentrarDiv] = useState(false)
 
     const getGif = async (search) => {
         const res = await axios.get(`https://api.giphy.com/v1/gifs/search?api_key=UuCkb2kXmu2TK2r9jF4yO4MGJhzc4UYj&q=${search}&limit=25&offset=0&rating=g&lang=es`)
@@ -30,15 +36,44 @@ const CodeRev = () => {
         setSearch('')
     }
 
+    const centerDiv = () => {
+        setCentrarDiv(true)
+    }
 
+    const projects = [
+        {
+            image: palace,
+            alt: 'Gaming Palace e-Commerce',
+            width: 200,
+            link: 'https://gp-front.vercel.app/home'
+        },
+        {
+            image: cana,
+            alt: 'Cannablitz e-Commerce (desarrollo)',
+            width: 200,
+            link: 'https://github.com/Azzzako/cannablitz'
+        },
+        {
+            image: home,
+            alt: 'Henry Foods (practica)',
+            width: 200,
+            link: 'https://github.com/Azzzako/PI_foods'
+        },
+        {
+            image: todo,
+            alt: 'Todo Machine (practica)',
+            width: 200,
+            link:'https://azzzako.github.io/todo-machine/'
+        }
 
-    console.log(response);
+    ]
+
 
     return (
         <div className={`${styles.container}`}>
             <section>
                 <div className={`${styles.balloon} nes-balloon`}>
-                    <p style={{ textAlign: 'center', margin: '40px' }}>¡Hey, qué onda! Si llegaste hasta aquí es porque quieres conocer mi Stack. ¡Échale un ojo abajo y descubre de qué estoy hecho!</p>
+                    <p className={`${styles.text_text}`} style={{ textAlign: 'center' }}>¡Hey, qué onda! <br />Si llegaste hasta aquí es porque quieres conocer mi Stack. <br />¡Échale un ojo abajo y descubre de qué estoy hecho!</p>
                 </div>
 
                 <div className={`${styles.badges}`}>
@@ -84,18 +119,37 @@ const CodeRev = () => {
                     </div>
                 </div>
                 <p></p>
+
+                <div className={`${styles.balloon_projects} nes-balloon is-dark`}>
+                    <p className={`${styles.text_text}`} style={{ textAlign: 'center' }}>Estos son algunos de los proyectos que he construido con las tecnologias anteriores</p>
+                    {projects.map(project => {
+                        return <div className={`${styles.project} nes-container is-centered`}>
+                            <Link href={project.link} target="_blank" style={{textDecoration:'none', color:'white'}}>
+                            <p>{project.alt}</p>
+                            <Image
+                                src={project.image}
+                                alt={project.alt}
+                                width={project.width}
+                                style={{ objectFit: 'contain' }}
+                            />
+                            </Link>
+                        </div>
+                    })}
+                </div>
+
                 <div className={`${styles.balloon} nes-balloon`}>
-                    <p style={{ textAlign: 'center', margin: '40px' }}>Lo sé, lo sé, quizás todavía no la armo tanto, pero voy en camino y estoy aprendiendo un monton de este mundo tan extenso del desarrollo web.</p>
+                    <p className={`${styles.text_text}`} style={{ textAlign: 'center' }}>Me encuentro en constante preparación y aprendizaje diario, pues mi objetivo es ser un desarrollador excepcional. <br />Me esfuerzo constantemente para enfrentar nuevos desafíos y aprender nuevas habilidades que me permitan crecer y mejorar en mi carrera..</p>
                 </div>
             </section>
 
             <section>
                 <div className={`${styles.balloon} nes-balloon`}>
-                    <p style={{ textAlign: 'center', margin: '40px' }}>...En fin, ¿Sabes qué onda? También tengo habilidades en la creación y consumo de APIs. ¿No me crees? ¡Échale un ojo aquí abajo y busca tu GIF favorito!</p>
+                    <p className={`${styles.text_text}`} style={{ textAlign: 'center' }}>...En fin, ¿Sabes qué onda? <br />También tengo habilidades en la creación y consumo de APIs. <br />¿No me crees? ¡Échale un ojo aquí abajo y busca tu GIF favorito!</p>
                 </div>
 
                 <div className={`${styles.cont} nes-container with-title is-centered `}>
                     <p className="title" >Buscador de gifs</p>
+                    <i className="nes-octocat animate" />
                     <p style={{ color: 'black' }}>Consumiendo API de Giphy </p>
                     <div className="nes-field">
                         <label htmlFor="search" style={{ color: 'black' }}>Busca busca busca!!!!!</label>
@@ -103,15 +157,19 @@ const CodeRev = () => {
                         <button className="nes-btn is-warning" onClick={onSearch}>Dale dale!</button>
                     </div>
                     {
-                        response ?
-                            <img src={response[0]?.images.original.url} alt={response[0]?.title} width={200} height={200} crossOrigin="anonymous" />
+                        response || response?.length < 0 ?
+                            <div className={`${centrarDiv ? styles.gif_cont_cent : styles.gif_cont}`}>
+                                <img src={response[0]?.images.original.url} alt={response[0]?.title} width={200} height={200} crossOrigin="anonymous" className={`${styles.gif}`} />
+                                <p>{`Aprovecha este gif para que veas que tambien se centrar los <div>`}</p>
+                                <button className="nes-btn" onClick={centerDiv}>Centrar DIV</button>
+                            </div>
                             :
                             <p>Tienes que buscar para que algo aparezca aqui</p>
                     }
                 </div>
 
                 <div className={`${styles.balloon} nes-balloon`}>
-                    <p style={{ textAlign: 'center', margin: '40px' }}>Es importante destacar que cuento con un conjunto de habilidades sólidas en el desarrollo web, y estoy enfocado en mejorar y perfeccionar mis fortalezas. En este sentido, mi pasión se centra en el aprendizaje continuo y en la creación de sitios web atractivos y funcionales.</p>
+                    <p className={`${styles.text_text}`} style={{ textAlign: 'center' }}>Es importante destacar que cuento con un conjunto de habilidades sólidas en el desarrollo web, y estoy enfocado en mejorar y perfeccionar mis fortalezas. En este sentido, mi pasión se centra en el aprendizaje continuo y en la creación de sitios web atractivos y funcionales.</p>
                 </div>
             </section>
         </div>

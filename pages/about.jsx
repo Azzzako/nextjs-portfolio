@@ -58,7 +58,7 @@ const About = () => {
                                         className={style.image}
                                     />
                                 </div>
-                                <h1 className={style.title}>{`Azzzako`}</h1>
+                                <h1 className={style.title}>{`Asael FrontEnd Developer`}</h1>
                                 <div className={style.coin}>
                                     <i className={`${style.coin_icon} nes-icon coin is-medium`}></i>
                                     <i className={`${style.coin_icon} nes-icon coin is-medium`}></i>
