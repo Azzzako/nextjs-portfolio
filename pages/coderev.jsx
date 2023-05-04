@@ -79,18 +79,18 @@ const CodeRev = () => {
                 <div className={`${styles.badges}`}>
                     <div className={`nes-badge is-icon`}>
                         <span className="is-dark is-small"><IoLogoJavascript style={{ fontSize: '20px', fill: 'yellow', color: 'black' }} /></span>
-                        <span className={`${styles.title} is-error`} style={{ color: 'yellow', width: '120%' }}>JS</span>
+                        <span className={`${styles.title} is-dark`} style={{ color: 'yellow', width: '120%' }}>JS</span>
                     </div>
                     <div className={`nes-badge is-icon`}>
-                        <span className="is-warning "><IoLogoNodejs style={{ fontSize: '20px', fill: 'green', color: 'black' }} /></span>
-                        <span className={`${styles.title} is-success`} style={{ color: 'green', width: '120%' }}>NodeJs</span>
+                        <span className="is-primary"><IoLogoNodejs style={{ fontSize: '20px', fill: 'black', color: 'black' }} /></span>
+                        <span className={`${styles.title} is-primary`} style={{ color: 'black', width: '120%' }}>NodeJs</span>
                     </div>
                     <div className={`nes-badge is-icon`}>
                         <span className="is-dark is-small"><FaReact style={{ fontSize: '20px', fill: 'aqua', color: 'black' }} /></span>
-                        <span className={`${styles.title} is-success`} style={{ color: 'aqua', width: '120%' }}>React</span>
+                        <span className={`${styles.title} is-dark`} style={{ color: 'aqua', width: '120%' }}>React</span>
                     </div>
                     <div className={`nes-badge is-icon`}>
-                        <span className="is-primary is-small"><SiRedux style={{ fontSize: '20px', fill: '#7248B6', color: 'black' }} /></span>
+                        <span className="is-warning is-small"><SiRedux style={{ fontSize: '20px', fill: '#7248B6', color: 'black' }} /></span>
                         <span className={`${styles.title} is-warning`} style={{ color: '#7248B6', width: '120%' }}>Redux</span>
                     </div>
                     <div className={`nes-badge is-icon`}>
@@ -98,20 +98,20 @@ const CodeRev = () => {
                         <span className={`${styles.title} is-primary`} style={{ color: 'white', width: '120%' }}>NextJs</span>
                     </div>
                     <div className={`nes-badge is-icon`}>
-                        <span className="is-success is-small"><SiExpress style={{ fontSize: '20px', fill: 'white', color: 'black' }} /></span>
+                        <span className="is-error is-small"><SiExpress style={{ fontSize: '20px', fill: 'white', color: 'black' }} /></span>
                         <span className={`${styles.title} is-error`} style={{ color: 'white', width: '120%' }}>Express</span>
                     </div>
                     <div className={`nes-badge is-icon`}>
-                        <span className="is-error is-small"><SiSequelize style={{ fontSize: '20px', fill: 'white', color: 'black' }} /></span>
+                        <span className="is-success is-small"><SiSequelize style={{ fontSize: '20px', fill: 'white', color: 'black' }} /></span>
                         <span className={`${styles.title} is-success`} style={{ color: 'white', width: '120%' }}>Sqlize</span>
                     </div>
                     <div className={`nes-badge is-icon`}>
                         <span className="is-warning is-small"><SiPostgresql style={{ fontSize: '20px', fill: '#2C5D8B', color: '#2C5D8B' }} /></span>
-                        <span className={`${styles.title} is-error`} style={{ color: '#4383B9', width: '120%' }}>SQL</span>
+                        <span className={`${styles.title} is-warning`} style={{ color: '#4383B9', width: '120%' }}>SQL</span>
                     </div>
                     <div className={`nes-badge is-icon`}>
                         <span className="is-dark is-small"><SiMaterialdesign style={{ fontSize: '20px', fill: 'white', color: 'black' }} /></span>
-                        <span className={`${styles.title} is-primary`} style={{ width: '120%', color: 'white' }}>Mat UI</span>
+                        <span className={`${styles.title} is-dark`} style={{ width: '120%', color: 'white' }}>Mat UI</span>
                     </div>
                     <div className={`nes-badge is-icon`}>
                         <span className="is-warning is-small"><SiBootstrap style={{ fontSize: '20px', fill: '#7248B6', color: 'black' }} /></span>
