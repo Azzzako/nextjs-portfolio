@@ -152,9 +152,9 @@ const CodeRev = () => {
                     <i className="nes-octocat animate" />
                     <p style={{ color: 'black' }}>Consumiendo API de Giphy </p>
                     <div className="nes-field">
-                        <label htmlFor="search" style={{ color: 'black' }}>Busca busca busca!!!!!</label>
+                        <label htmlFor="search" style={{ color: 'black' }}>Busca, busca, busca</label>
                         <input className="nes-input" type="text" id="search" value={search} onChange={onChangeInput} />
-                        <button className="nes-btn is-warning" onClick={onSearch}>Dale dale!</button>
+                        <button className="nes-btn is-warning" onClick={onSearch}>Dale, dale</button>
                     </div>
                     {
                         response || response?.length < 0 ?
@@ -164,7 +164,7 @@ const CodeRev = () => {
                                 <button className="nes-btn" onClick={centerDiv}>Centrar DIV</button>
                             </div>
                             :
-                            <p>Tienes que buscar para que algo aparezca aqui</p>
+                            <p>Busca algo para que aparezca aqui</p>
                     }
                 </div>
 
