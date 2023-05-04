@@ -14,14 +14,15 @@ export default class MyApp extends App {
           body {
             margin: 0;
             padding: 0;
+            font-family :  'Press Start 2P', cursive;
           }
         `}</style>
         <Head>
-            <title>Portfolio Azako</title>
+          <title>Portfolio Azako</title>
         </Head>
-        <Navbar/>
+        <Navbar />
         <Component {...pageProps} />
-        <Footer/>
+        <Footer />
       </>
     )
   }
