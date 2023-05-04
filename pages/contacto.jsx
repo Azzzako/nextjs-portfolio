@@ -14,7 +14,7 @@ const Contacto = () => {
             <div className={`${styles.contenedor}`}>
                 <section>
                     <div className={`${styles.balloon} nes-balloon`}>
-                        <p className={``} style={{ textAlign: 'center' }}>¿Trabajemos juntos? <br />¡Genial! Si deseas contactarme, aquí te comparto mis redes sociales.<br /> ¡Es fácil encontrarme por aquí!</p>
+                        <p className={``} style={{ textAlign: 'center' }}>¿Trabajamos juntos? <br />¡Genial! Si deseas contactarme, aquí te comparto mis redes sociales.<br /> ¡Es fácil encontrarme por aquí!</p>
 
                         <div className={`${styles.icon_container}`}>
                             <Link href='https://www.linkedin.com/in/asael-hernandez-diaz/' target="_blank"><i className="nes-icon linkedin is-large" /></Link>
