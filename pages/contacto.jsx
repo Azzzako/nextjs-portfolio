@@ -22,7 +22,7 @@ const Contacto = () => {
                             <Link href='https://github.com/Azzzako' target="_blank"><i className="nes-icon github is-large" /></Link>
                             <Link href='https://www.instagram.com/azak.cth/'><i className="nes-icon instagram is-large" /></Link>
                         </div>
-                        <a href="/assets/cv_fsdev_asael_hernandez.pdf" download style={{ textAlign: 'center', textDecoration:'underline', color:'red' }}>Descargar CV</a>
+                        <a href="/assets/NuevoCV.pdf" download style={{ textAlign: 'center', textDecoration:'underline', color:'red' }}>Descargar CV</a>
 
                         <p className={``} style={{ textAlign: 'center', padding: '20px',  }}>Si prefieres una opción más cómoda, puedes completar este formulario y me pondré en contacto contigo en breve.</p>
 

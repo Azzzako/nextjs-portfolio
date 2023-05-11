@@ -3,6 +3,8 @@ import Link from 'next/link'
 import styles from '../components/navbar.module.css'
 
 const Navbar = () => {
+
+    
     return (
         <nav className={styles.nav_cont}>
             <div className={styles.nav}>
